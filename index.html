@@ -1,501 +1,462 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Di Jiaqi | Academic Homepage</title>
+  <title>Di Jiaqi | Personal Homepage</title>
 
   <meta name="description"
-        content="Personal academic homepage of Di Jiaqi, a graduate student in Control Engineering at Northeastern University, China.">
+        content="Personal academic homepage of Di Jiaqi, Northeastern University, China.">
 
-  <meta name="keywords"
-        content="Di Jiaqi, Northeastern University, Control Engineering, Thermal Management, Semiconductor">
-
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
-
-  <script src="https://kit.fontawesome.com/a860a211d3.js"
-          crossorigin="anonymous"></script>
-
-  <!-- Original Luka Homepage Styles -->
   <link rel="stylesheet" href="assets/css/font_sans_serif.css">
   <link rel="stylesheet" href="assets/css/theme-luka.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* Personal photo */
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 18px;
+      border: 3px solid rgba(128, 128, 128, 0.15);
+    }
+
+    /* Make sure the page works even if template styles vary */
+    .homepage-layout {
+      max-width: 1120px;
+      margin: 60px auto 40px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 50px;
+    }
+
+    .profile-sidebar {
+      text-align: center;
+    }
+
+    .profile-name {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    .profile-subtitle {
+      line-height: 1.7;
+      opacity: 0.8;
+    }
+
+    .profile-email {
+      overflow-wrap: anywhere;
+      margin: 15px 0;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 24px;
+      margin-top: 15px;
+    }
+
+    .homepage-main {
+      min-width: 0;
+    }
+
+    .content-section {
+      margin-bottom: 42px;
+    }
+
+    .content-section h2 {
+      font-size: 23px;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+    }
+
+    .content-section p {
+      line-height: 1.85;
+    }
+
+    .content-card {
+      padding: 18px 20px;
+      border: 1px solid rgba(128, 128, 128, 0.18);
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .content-card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .school-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .school-logo {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .site-footer {
+      text-align: center;
+      opacity: 0.7;
+      padding: 25px 15px;
+      font-size: 13px;
+    }
+
+    .theme-button {
+      position: fixed;
+      top: 18px;
+      right: 22px;
+      padding: 9px 13px;
+      border: 1px solid rgba(128, 128, 128, 0.3);
+      border-radius: 8px;
+      cursor: pointer;
+      background: transparent;
+      color: inherit;
+      z-index: 100;
+    }
+
+    @media (max-width: 720px) {
+      .homepage-layout {
+        grid-template-columns: 1fr;
+        margin-top: 75px;
+        gap: 30px;
+      }
+
+      .profile-photo {
+        width: 155px;
+        height: 155px;
+      }
+
+      .school-row {
+        align-items: flex-start;
+      }
+    }
+  </style>
+
 </head>
 
-<body class="theme-luka">
-
-  <!-- Navigation -->
-  <nav class="top-nav">
-    <div class="nav-container">
-
-      <div class="nav-left">
-        <a href="./">Home</a>
-      </div>
-
-      <div class="nav-right">
-        <button id="themeToggle"
-                class="theme-toggle"
-                title="Toggle theme"
-                aria-label="Toggle theme">
-          <i class="fa-solid fa-moon"></i>
-        </button>
-      </div>
-
-    </div>
-  </nav>
-
-  <div class="wrapper">
-
-    <!-- Profile Sidebar -->
-    <header class="sidebar">
-      <div class="profile-card">
-
-        <!-- Avatar -->
-        <a class="image avatar">
-          <img src="assets/img/avatar.svg"
-               alt="Di Jiaqi">
-        </a>
-
-        <!-- Name -->
-        <h1 class="site-name">Di Jiaqi</h1>
-
-        <!-- Email -->
-        <p class="site-email">
-          deyidi2004@gmail.com
-        </p>
-
-        <!-- Social Links -->
-        <div class="social-icons">
-
-          <a href="mailto:deyidi2004@gmail.com"
-             title="Email">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-
-          <a href="https://github.com/deyidi2004-ship-it"
-             target="_blank"
-             rel="noopener noreferrer"
-             title="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-
-        </div>
-
-        <!-- Welcome Card -->
-        <div class="visitor-card">
-
-          <div class="visitor-card-title">
-            Welcome
-          </div>
-
-          <div class="visitor-card-body">
-            Welcome to my personal academic homepage!
-            I am interested in control engineering,
-            semiconductor thermal management,
-            and advanced electronic technologies.
-          </div>
-
-        </div>
-
-      </div>
-    </header>
-
-    <!-- Main Content -->
-    <section class="content">
-
-      <!-- About Me -->
-      <div class="section" id="about">
-
-        <h2 class="section-title">About Me</h2>
-
-        <div class="section-body">
-
-          <p>
-            Hello! My name is
-            <strong>Di Jiaqi</strong>
-            (狄加齐).
-            I am a graduate student majoring in
-            <strong>Control Engineering</strong>
-            at
-            <strong>Northeastern University, China</strong>.
-          </p>
-
-          <p>
-            My academic interests include control systems,
-            semiconductor thermal management,
-            electronic device reliability,
-            and engineering optimization.
-          </p>
-
-          <p>
-            I have completed internships at
-            <strong>Google</strong>
-            and
-            <strong>Microsoft</strong>,
-            gaining valuable exposure to
-            engineering practices and
-            technology-driven innovation.
-          </p>
-
-          <p>
-            My research interests also involve
-            heat dissipation challenges in
-            next-generation foldable electronic devices,
-            particularly transistor-level thermal behavior
-            and device reliability.
-          </p>
-
-          <p>
-            I enjoy exploring complex engineering problems
-            and developing practical solutions
-            through research and innovation.
-          </p>
-
-          <p>
-            <strong>Contact:</strong>
-            <a href="mailto:deyidi2004@gmail.com">
-              deyidi2004@gmail.com
-            </a>
-          </p>
-
-        </div>
-      </div>
-
-      <!-- Education -->
-      <div class="section" id="education">
-
-        <h2 class="section-title">Education</h2>
-
-        <div class="section-body">
-
-          <div class="card">
-
-            <div class="experience-item">
-
-              <img src="assets/img/neu-logo.png"
-                   alt="Northeastern University Logo"
-                   class="institution-logo"
-                   onerror="this.onerror=null;this.src='assets/img/institution.svg';">
-
-              <div class="experience-content">
-
-                <p class="exp-title">
-                  <strong>
-                    Northeastern University, China
-                  </strong>
-                </p>
-
-                <p class="exp-detail">
-                  Master's Student in Control Engineering
-                </p>
-
-                <p class="exp-period">
-                  Graduate Studies
-                </p>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Experience -->
-      <div class="section" id="experience">
-
-        <h2 class="section-title">
-          Professional Experience
-        </h2>
-
-        <div class="section-body">
-
-          <!-- Google Internship -->
-          <div class="card timeline-item">
-
-            <div class="experience-item">
-
-              <img src="assets/img/institution.svg"
-                   alt="Google Internship"
-                   class="institution-logo">
-
-              <div class="experience-content">
-
-                <p class="exp-title">
-                  <strong>Google</strong>
-                </p>
-
-                <p class="exp-detail">
-                  Intern
-                </p>
-
-                <p class="exp-detail">
-                  Gained experience in professional
-                  engineering environments,
-                  technical collaboration,
-                  and technology development.
-                </p>
-
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Microsoft Internship -->
-          <div class="card timeline-item">
-
-            <div class="experience-item">
-
-              <img src="assets/img/institution.svg"
-                   alt="Microsoft Internship"
-                   class="institution-logo">
-
-              <div class="experience-content">
-
-                <p class="exp-title">
-                  <strong>Microsoft</strong>
-                </p>
-
-                <p class="exp-detail">
-                  Intern
-                </p>
-
-                <p class="exp-detail">
-                  Participated in a technology-focused
-                  professional environment,
-                  gaining exposure to engineering
-                  practices and teamwork.
-                </p>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Research Projects -->
-      <div class="section" id="projects">
-
-        <h2 class="section-title">
-          Research Projects
-        </h2>
-
-        <div class="section-body">
-
-          <div class="card project-card">
-
-            <p>
-              <strong>
-                Thermal Management of Transistors
-                in Next-Generation Tri-Fold Devices
-              </strong>
-            </p>
-
-            <p>
-              This project focuses on thermal
-              management challenges associated
-              with transistor components in
-              advanced foldable electronic devices.
-            </p>
-
-            <p>
-              The research explores heat dissipation,
-              thermal reliability,
-              and potential engineering approaches
-              for improving electronic device performance.
-            </p>
-
-            <p>
-              <strong>Research Keywords:</strong>
-              Transistor Thermal Management,
-              Heat Dissipation,
-              Semiconductor Reliability,
-              Engineering Optimization.
-            </p>
-
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Publications -->
-      <div class="section" id="publications">
-
-        <h2 class="section-title">
-          Publications
-        </h2>
-
-        <div class="section-body">
-
-          <div class="publications">
-
-            <p>
-              Research publications and academic
-              contributions will be updated here.
-            </p>
-
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Awards -->
-      <div class="section" id="awards">
-
-        <h2 class="section-title">
-          Awards & Honors
-        </h2>
-
-        <div class="section-body">
-
-          <div class="awards-grid">
-
-            <div class="award-item">
-
-              <span class="award-icon">🏅</span>
-
-              <div class="award-text">
-                Academic achievements and honors
-                will be updated here.
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-
-      <p>
-        &copy; 2026 Di Jiaqi.
-        All rights reserved.
-
+<body>
+
+  <button class="theme-button"
+          id="themeToggle"
+          type="button"
+          aria-label="Toggle dark mode">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <div class="homepage-layout">
+
+    <!-- LEFT: PERSONAL INFORMATION -->
+    <aside class="profile-sidebar">
+
+      <!-- YOUR REAL PHOTO -->
+      <img
+        src="assets/img/avatar.jpg"
+        alt="Portrait of Di Jiaqi"
+        class="profile-photo"
+      >
+
+      <h1 class="profile-name">
+        Di Jiaqi
+      </h1>
+
+      <p class="profile-subtitle">
+        狄加齐
         <br>
-
-        <span class="template-credit">
-          <a href="https://github.com/wzsyyh/luka-homepage-template">
-            Luka Homepage Template
-          </a>
-          by
-          <a href="https://wzsyyh.github.io/">
-            Yuheng Yang
-          </a>
-        </span>
-
+        Master's Student
+        <br>
+        Control Engineering
+        <br>
+        Northeastern University, China
       </p>
 
-    </footer>
+      <p class="profile-email">
+        <a href="mailto:deyidi2004@gmail.com">
+          deyidi2004@gmail.com
+        </a>
+      </p>
+
+      <div class="social-links">
+
+        <a href="https://github.com/deyidi2004-ship-it"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="mailto:deyidi2004@gmail.com"
+           aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+      </div>
+
+    </aside>
+
+    <!-- RIGHT: MAIN CONTENT -->
+    <main class="homepage-main">
+
+      <!-- ABOUT ME -->
+      <section class="content-section" id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+          Hello! My name is <strong>Di Jiaqi (狄加齐)</strong>.
+          I am a graduate student majoring in
+          <strong>Control Engineering</strong>
+          at <strong>Northeastern University, China</strong>.
+        </p>
+
+        <p>
+          My academic interests include control systems,
+          semiconductor thermal management,
+          electronic device reliability,
+          and engineering optimization.
+        </p>
+
+        <p>
+          I am interested in solving challenging
+          engineering problems through research,
+          analysis, and technological innovation.
+        </p>
+
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="content-section" id="education">
+
+        <h2>Education</h2>
+
+        <div class="content-card">
+
+          <div class="school-row">
+
+            <img
+              src="assets/img/neu-logo.png"
+              alt="Northeastern University Logo"
+              class="school-logo"
+              onerror="this.onerror=null;this.src='assets/img/institution.svg';"
+            >
+
+            <div>
+
+              <h3>Northeastern University, China</h3>
+
+              <p>
+                Master's Student in Control Engineering
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- PROFESSIONAL EXPERIENCE -->
+      <section class="content-section" id="experience">
+
+        <h2>Professional Experience</h2>
+
+        <div class="content-card">
+
+          <h3>Google</h3>
+
+          <p><strong>Intern</strong></p>
+
+          <p>
+            Gained experience in engineering practices,
+            technical collaboration, and technology
+            development.
+          </p>
+
+        </div>
+
+        <div class="content-card">
+
+          <h3>Microsoft</h3>
+
+          <p><strong>Intern</strong></p>
+
+          <p>
+            Gained exposure to professional engineering
+            environments, technical problem-solving,
+            and teamwork.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- RESEARCH PROJECTS -->
+      <section class="content-section" id="projects">
+
+        <h2>Research Projects</h2>
+
+        <div class="content-card">
+
+          <h3>
+            Thermal Management of Transistors
+            in Advanced Foldable Devices
+          </h3>
+
+          <p>
+            This project focuses on heat dissipation
+            challenges associated with transistor
+            components in advanced foldable
+            electronic devices.
+          </p>
+
+          <p>
+            Research topics include thermal management,
+            semiconductor reliability, and engineering
+            approaches for improving device performance.
+          </p>
+
+          <p>
+            <strong>Keywords:</strong>
+            Heat Dissipation,
+            Transistor Thermal Management,
+            Semiconductor Reliability,
+            Engineering Optimization.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section class="content-section" id="publications">
+
+        <h2>Publications</h2>
+
+        <p>
+          Publications and academic contributions
+          will be updated here.
+        </p>
+
+      </section>
+
+      <!-- AWARDS -->
+      <section class="content-section" id="awards">
+
+        <h2>Awards &amp; Honors</h2>
+
+        <p>
+          Academic achievements and honors
+          will be updated here.
+        </p>
+
+      </section>
+
+      <!-- CONTACT -->
+      <section class="content-section" id="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+          Email:
+          <a href="mailto:deyidi2004@gmail.com">
+            deyidi2004@gmail.com
+          </a>
+        </p>
+
+        <p>
+          GitHub:
+          <a href="https://github.com/deyidi2004-ship-it"
+             target="_blank"
+             rel="noopener noreferrer">
+            deyidi2004-ship-it
+          </a>
+        </p>
+
+      </section>
+
+    </main>
 
   </div>
 
-  <!-- Original Template JavaScript -->
-  <script src="assets/js/scale.fix.js"></script>
+  <footer class="site-footer">
 
+    <p>
+      &copy; 2026 Di Jiaqi.
+      All rights reserved.
+    </p>
+
+    <p>
+      Based on the
+      <a href="https://github.com/wzsyyh/luka-homepage-template"
+         target="_blank"
+         rel="noopener noreferrer">
+        Luka Homepage Template
+      </a>.
+    </p>
+
+  </footer>
+
+  <!-- DARK / LIGHT MODE -->
   <script>
-    (function() {
+    (function () {
+      const button = document.getElementById("themeToggle");
+      const icon = button.querySelector("i");
 
-      const themeToggle =
-        document.getElementById('themeToggle');
-
-      const icon = themeToggle.querySelector('i');
-
-      function setTheme(isDark) {
+      function applyTheme(theme) {
+        const isDark = theme === "dark";
 
         document.documentElement.setAttribute(
-          'data-theme',
-          isDark ? 'dark' : 'light'
+          "data-theme",
+          theme
         );
 
-        icon.classList.toggle('fa-sun', isDark);
-        icon.classList.toggle('fa-moon', !isDark);
+        icon.className = isDark
+          ? "fa-solid fa-sun"
+          : "fa-solid fa-moon";
 
-        localStorage.setItem(
-          'theme',
-          isDark ? 'dark' : 'light'
-        );
-      }
-
-      const savedTheme =
-        localStorage.getItem('theme');
-
-      const prefersDark =
-        window.matchMedia(
-          '(prefers-color-scheme: dark)'
-        ).matches;
-
-      setTheme(
-        savedTheme
-          ? savedTheme === 'dark'
-          : prefersDark
-      );
-
-      themeToggle.addEventListener(
-        'click',
-        function() {
-
-          const isDark =
-            document.documentElement.getAttribute(
-              'data-theme'
-            ) === 'dark';
-
-          setTheme(!isDark);
-
+        try {
+          localStorage.setItem("theme", theme);
+        } catch (error) {
+          // The page can still work without localStorage.
         }
-      );
-
-      if ('IntersectionObserver' in window) {
-
-        const observer =
-          new IntersectionObserver(
-            function(entries) {
-
-              entries.forEach(function(entry) {
-
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('visible');
-                  observer.unobserve(entry.target);
-                }
-
-              });
-
-            },
-            { threshold: 0.1 }
-          );
-
-        document.querySelectorAll('.section')
-          .forEach(function(el) {
-            observer.observe(el);
-          });
-
-      } else {
-
-        document.querySelectorAll('.section')
-          .forEach(function(el) {
-            el.classList.add('visible');
-          });
-
       }
 
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem("theme");
+      } catch (error) {
+        // Use the default theme.
+      }
+
+      applyTheme(savedTheme === "dark" ? "dark" : "light");
+
+      button.addEventListener("click", function () {
+        const current =
+          document.documentElement.getAttribute("data-theme");
+
+        applyTheme(current === "dark" ? "light" : "dark");
+      });
     })();
   </script>
 
